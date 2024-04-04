@@ -19,4 +19,4 @@ spec:
       - name: webapp
         image: kodekloud/simple-webapp:green
         ports:
-        - containerPort: 80
+        - containerPort: 8080
