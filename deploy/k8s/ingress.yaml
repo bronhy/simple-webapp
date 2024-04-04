@@ -10,7 +10,7 @@ spec:
     - match: Host(`staging-api.fondsfinanz.de`) && Path(`/simple-webapp`)
       kind: Rule
       services:
-        - name: simple-webap
+        - name: simple-webapp
           port: 80
       middlewares:
         - name: stripprefix
