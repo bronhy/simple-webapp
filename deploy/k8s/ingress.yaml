@@ -7,7 +7,7 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`staging-api.fondsfinanz.de`) && Path(`/simple-webapp`)
+    - match: Host(`staging-api.fondsfinanz.de`) && PathPrefix(`/simple-webapp`)
       kind: Rule
       services:
         - name: simple-webapp
