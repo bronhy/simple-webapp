@@ -1,0 +1,17 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: api
+  namespace: contract-document-processor
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - match: Host(`staging-api.fondsfinanz.de`) && Path(`/simple-webapp`)
+      kind: Rule
+      services:
+        - name: simple-webap
+          port: 80
+      middlewares:
+        - name: api_auth_headers
+
